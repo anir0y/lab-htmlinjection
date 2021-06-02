@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>How websites work</title>
+    <link rel="stylesheet" href="css/style.css"></link>
+</head>
+
+<body>
+    <div id='html-code-box'>
+        <div id='html-bar'>
+            <span id='html-url'>https://vulnerable-site.local</span>
+        </div>
+        <div class='theme' id='html-code'>
+            <p id='welcome-msg'></p>
+            <form id='form' autocomplete="off">
+                <div class='form-field'>
+                    <input class="input-text" type="text" id="name" placeholder="Whats your name?">
+                </div>
+                <button onclick="sayHi()" type='button' class='login'>Say Hi</button>
+            </form>
+            
+        </div>
+        <div id= "fun">
+            <pre>
+                you have to create a link to "hacker.local" to get the flag. 
+            </pre>
+
+        </div>
+    </div>
+    
+    <script src='js/script.js'></script>
+    <script>
+        function sayHi() {
+            const name = document.getElementById('name').value
+            document.getElementById("welcome-msg").innerHTML = "Welcome " + name
+            setTimeout(checkAnswer, 100)
+        }
+    </script>
+</body>
+
+</html>
